@@ -1,3 +1,6 @@
+<?php
+include 'exercise_2.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +14,18 @@
 </head>
 
 <body>
+    <h3>Check if vowel or consonant</h3>
+    <?php
+    echo checkIfVowelOrConsonant('b').'<br/>';
+    echo convertDigitToWord(231).'<br/>';
+    echo isDivisibleByThree(3).'<br/>';
+    echo isDivisibleByThree(5).'<br/>';
+    echo implode(", ", deleteDuplicate(["one","one","two"])).'<br/>';
+    echo isArmstrongNumber(153).'<br/>';
+    echo isArmstrongNumber(370).'<br/>';
+
+    ?>
+
     <p>1. Using IF...ELSE statement, write a code that check if given string is more than 5 characters. (5pts)</p>
     <?php
     $word1 = 'class';
