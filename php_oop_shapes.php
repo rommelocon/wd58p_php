@@ -15,6 +15,7 @@ interface IShape
 interface ITriangle
 {
     public function getPerimeter($length, $width, $height);
+    public function getAreaOfTriangle($base, $height);
 }
 
 class Square extends Shape implements IShape
@@ -61,14 +62,14 @@ class Rectangle extends Shape implements IShape
     }
 }
 
-class Triangle extends Shape implements ITriangle, IShape
+class Triangle extends Shape implements ITriangle
 {
     public function description()
     {
         return "Triangle has three sides.";
     }
 
-    public function getArea($base, $height)
+    public function getAreaOfTriangle($base, $height)
     {
         return ($base * $height) / 2;
     }
@@ -111,7 +112,7 @@ echo $shape2->getPerimeter(4, 6) . "\n"; // output 20
 
 $shape3 = new Triangle();
 echo $shape3->description(); // output "Triangle have three sides."
-echo $shape3->getArea(4, 6); // output 12
+echo $shape3->getAreaOfTriangle(4, 6); // output 12
 echo $shape3->getPerimeter(4, 6, 7); // output 17
 
 $shape4 = new Circle();
